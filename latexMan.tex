@@ -470,15 +470,15 @@
 \section{Introduction}
 \subsection{Blockchain}
 Blockchain has been introduced in the last years as a technology method for data security problems, where there are several implementations of it, like Bitcoin Wallet \cite{Bamert_2017}, Ripples or Ethereum\cite{Buterin_2017}, as many others crypto currencies. 
+
 Besides that, deleting the intermediary from the equation through a bank transaction between an account to another and giving that control to the users has been an interesting approach, where there is a big pool of users that approve those transactions if those are valid to be added to the block chain, with the difference that nobody knows which is the origin user and the destination user, the inly information needed is that a virtual wallet is sending some money or crypto currency to another wallet identified by an address.
 
 After a transaction is created is grouped into blocks, and the links between blocks and their content are protected by cryptography and cannot be forged. Once that the transaction is inside the blockchain, there is no way to erase it.
 
 \subsection{Mining}
-Kroll et al. \cite{Kroll_2013} explain that the mining process requires vast computing power as only a “brute force, trial and error” method can be used to calculate the SHA-256 hash. Every two weeks, the complexity of the challenge is adjusted to ensure that, on average, a block is mined every 10 minutes. The financial incentive of 25 bitcoins is offered to the
-first miner to successfully calculate the hash. 
+Kroll et al. \cite{Kroll_2013} explain that the mining process requires vast computing power as only a "brute force, trial and error" method can be used to calculate the SHA-256 hash. Every two weeks, the complexity of the challenge is adjusted to ensure that, on average, a block is mined every 10 minutes. The financial incentive of 25 bitcoins is offered to the first miner to successfully calculate the hash. 
 
-This technique may lead money earnings but also requires alot of computing resources consuming, as electricity, but worth to mention it as part of the whole blockchain and crypto currencies possibilities.
+This technique may lead money earnings but also requires alot of computing resources consuming, as electricity, also this technical hardware and software equipment is not available in every country, sometimes there is a cost of buy in them when the mining team is in a place that makes them get it from exterior. But worth to mention it as part of the whole blockchain and crypto currencies possibilities.
 
 \subsection{Blockchain and Internet of Things}
 This concept adapts to the blockchain and mobile relation, as there are daily millions and millions of devices moving transactions from one side to another, using bank accounts or orher payment methods which may several waits from clients, time consuming and more. Millions of mobile devices can avoid the bank intermediary by handling their transactions inside the blockchain.
@@ -487,8 +487,14 @@ As stuff and not just people are relation with the Internet every day, blockchai
 
 Modern Internet of Things(IoT) software systems, like interconnected transportation systems, generate a lot if data every day. The data exchanges may charge a fee for handeling the transactions inside the wallets, which may also elevate costs, security concerns and privacy of several transactions for a single entity \cite{TQiu_2017}. 
 
+\subsection{Contribution}
+In this paper, we describe a new algorithm that enable any kind of mobile devices, including Android and iOS mobile operating systems, to run transaction applications with several amounts of traffic (our tests are based on two hundred transactions per second), where the mobile device can handle that amount of traffic and keep the user interface without lacks or interrumptions to the user. The 70 percentage of the transactions used to test the algorithm were on devices with Linux based operating systems.
 
+All transactions used in this experiment used non bank accounts between source and destination accounts, but blockchain in order to add every transaction to the chain where will be approved by other users. 
 
+The performance shown is superior than bank systems in 30 percentage as the experiments show. We think this is part because the bank software systems sometimes are old, or even new sometimes data need to be moved from one side to another using cronjobs or tasks schedulers which is not in real time.
+
+Our approach avoids all this waiting times, given an algorithm which can be used in several markets that includes monetary transactions, via your cellphone or anu mobile device.
 
 
 \section{Background}
@@ -546,7 +552,16 @@ In \cite{Yang} the authors consider an edge computing enabled mobile blockchain 
 
 \section{Future Work}
 
-Future Work 
+Arguably the most important piece of work to conduct in the near future is to make this algorithm able  proposed network live. This will then let
+us examine in greater detail whether the assumptions in this
+paper hold true against a real world adversary, who controls
+various percentages of the network.
+The deployment onto a real world network would also allow
+us to see whether our solutions to known issues and limitations
+hold true, or if new issues surface. It would also allow more
+research into possible attack vectors, such as an offline chain
+attack, and the effect that this would have on the integrity of the
+data, as well as possible ways to prevent this attack.
 
 
 
