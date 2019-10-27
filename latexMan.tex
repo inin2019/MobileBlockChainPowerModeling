@@ -360,7 +360,7 @@
 % not capitalized unless they are the first or last word of the title.
 % Linebreaks \\ can be used within to get better formatting as desired.
 % Do not put math or special symbols in the title.
-\title{ Power modeling of blockchain applications in mobile systems }
+\title{ Power Modeling of Blockchain Applications in Mobile Systems }
 %
 %
 % author names and IEEE memberships
@@ -375,7 +375,7 @@
 \author{Manuel Figueroa,\IEEEmembership{ ITCR,}
         Esteban Leandro,\IEEEmembership{ ITCR}}% <-this % stops a space
 \affil[]{\textit{MC-7201 Introduction to Research}}
-\affil[]{\textit{Instituto TecnolÃ³gico de Costa Rica}}
+\affil[]{\textit{Instituto Tecnológico de Costa Rica}}
 \affil[]{\textit{\{mfigueroacr, elc790\}@gmail.com}}
 
 % note the % following the last \IEEEmembership and also \thanks - 
@@ -399,7 +399,7 @@
 
 
 % The paper headers
-\markboth{ININ Power modeling of blockchain applications in mobile systems, 2019}%
+\markboth{ININ Power Modeling of blockchain applications in mobile systems, 2019}%
 {Shell \MakeLowercase{\textit{et al.}}: Power modeling of blockchain applications in mobile systems }
 % The only time the second header will appear is for the odd numbered pages
 % after the title page when using the twoside option.
@@ -443,8 +443,6 @@
   help the system designers to estimate how the devices will behave in terms of power consumption.
   Also, it will help application designers to define the scope of its application in terms of performance and power 
   consumption when it is executed in a mobile device and a high compute rate is expected to perform the blockchain mining process.
-  In regard of related work, there is a research about a blockchain system for mobile systems\cite{Suankaewmanee}, 
-  and an energy model for blockchain consensus algorithm \cite{Cole} \cite{Zehui}. Also, blockchain edge is researched in \cite{Yang} \cite{He} \cite{Yutao}. Deep learning approaches are researched in \cite{Nguyen} \cite{Dinh}. There is a research about wireless mobile miners \cite{Gilsoo} and also energy systems are researched in \cite{Ruzanna} \cite{Wang}. 
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -470,8 +468,103 @@
 
 
 \section{Introduction}
+\subsection{Blockchain}
+Blockchain has been introduced in the last years as a technology method for data security problems, where there are several implementations of it, like Bitcoin Wallet \cite{Bamert_2017}, Ripples or Ethereum\cite{Buterin_2017}, as many others crypto currencies. 
+
+Besides that, deleting the intermediary from the equation through a bank transaction between an account to another and giving that control to the users has been an interesting approach, where there is a big pool of users that approve those transactions if those are valid to be added to the block chain, with the difference that nobody knows which is the origin user and the destination user, the inly information needed is that a virtual wallet is sending some money or crypto currency to another wallet identified by an address.
+
+After a transaction is created is grouped into blocks, and the links between blocks and their content are protected by cryptography and cannot be forged. Once that the transaction is inside the blockchain, there is no way to erase it.
+
+\subsection{Mining}
+Kroll et al. \cite{Kroll_2013} explain that the mining process requires vast computing power as only a "brute force, trial and error" method can be used to calculate the SHA-256 hash. Every two weeks, the complexity of the challenge is adjusted to ensure that, on average, a block is mined every 10 minutes. The financial incentive of 25 bitcoins is offered to the first miner to successfully calculate the hash. 
+
+This technique may lead money earnings but also requires alot of computing resources consuming, as electricity, also this technical hardware and software equipment is not available in every country, sometimes there is a cost of buy in them when the mining team is in a place that makes them get it from exterior. But worth to mention it as part of the whole blockchain and crypto currencies possibilities.
+
+\subsection{Blockchain and Internet of Things}
+This concept adapts to the blockchain and mobile relation, as there are daily millions and millions of devices moving transactions from one side to another, using bank accounts or orher payment methods which may several waits from clients, time consuming and more. Millions of mobile devices can avoid the bank intermediary by handling their transactions inside the blockchain.
+
+As stuff and not just people are relation with the Internet every day, blockchain is a very advanced technique to interconnect transaction systems, as monitoring systems, health, finance, education and more.
+
+Modern Internet of Things(IoT) software systems, like interconnected transportation systems, generate a lot if data every day. The data exchanges may charge a fee for handeling the transactions inside the wallets, which may also elevate costs, security concerns and privacy of several transactions for a single entity \cite{TQiu_2017}. 
+
+\subsection{Contribution}
+In this paper, we describe a new algorithm that enable any kind of mobile devices, including Android and iOS mobile operating systems, to run transaction applications with several amounts of traffic (our tests are based on two hundred transactions per second), where the mobile device can handle that amount of traffic and keep the user interface without lacks or interrumptions to the user. The 70 percentage of the transactions used to test the algorithm were on devices with Linux based operating systems.
+
+All transactions used in this experiment used non bank accounts between source and destination accounts, but blockchain in order to add every transaction to the chain where will be approved by other users. 
+
+The performance shown is superior than bank systems in 30 percentage as the experiments show. We think this is part because the bank software systems sometimes are old, or even new sometimes data need to be moved from one side to another using cronjobs or tasks schedulers which is not in real time.
+
+Our approach avoids all this waiting times, given an algorithm which can be used in several markets that includes monetary transactions, via your cellphone or anu mobile device.
 
 
+\section{Background}
+\subsection{Mobile Blockchain Systems}
+According to \cite{crosby_2016} a blockchain system can be seen as a distributed database of records. 
+The system provides a public layer that keeps a record for every single event that have been executed among the participant parties.
+Each new transaction added to the blockchain requires a process to be included as a new block in the blockchain. That process requires some kind of validation, usually
+solving a proof-of-work puzzle.
+That kind of implementation is expensive and it has been hard to include a proper blockchain system in mobile architectures
+due to the lack of computing power and the limited energy of current mobile devices. For that reason some other approaches \cite{xiong_feng_niyato_wang_han_2018}, \cite{Zehui_Xiong} have been studied to enable
+blockchain application to be used in the mobile devices. 
+In those approaches, the authors claim that is a good idea to offload the mining process to an edge computing service provider, this will eventually enable any 
+device to participate as an active node in the blockchain network even if they are no capable of performing any mining process at all. 
+In that scenario the network must be supported by an external service and that will reduce the \emph{free-network} concept. The mobile devices will participate  as dumb clients and the entire
+blockchain process will be performed in the cloud.
+Also this novel approach and will be excellent to support e-commerce initiatives and will not limit the participation of
+users due to lack of computational power.
+
+\subsection{Power Monitoring}
+According to \cite{fairley_2017} the bitcoin miners are considered electromagnetic alchemist, because they can convert massive amounts of megawatt-hours of electricity into the world's fastest-growing currency.
+Because of the calculations required to hash a transaction block and correctly include it in the chain it is estimate that a bitcoin transaction consumes more than 5,000 times as much energy as using a Visa credit card.
+Even when the computers are constantly getting faster and more power efficient, the bitcoin algorithm increase the difficulty of the hashing procedures to keep the chain integrity and security by making almost impossible to introduce malicious blocks by outrunning the entire network and producing a new longer chain with the fraudulent blocks. That causes a huge impact in the power consumption of the platform, and it is estimates in a total of 73.12 TWh or the same as the entire consumption of Austria \cite{digiconomist}.
+
+Actually some strategies are implemented to solve this amount of power required to include a new block in the blockchain, some of them are related to change the proof-of-work algorithm to something more power efficient like Algorand \cite{gilad_hemo_micali_vlachos_zeldovich_2017}, using the Bizantine agreements technique to reach consensus, and others like proof-of-learning \cite{bravo-marquez_reeves_ugarte_2019} that use rankings of machine learning systems.
+
+It is possible to measure the power consumption of a component using the Ohm's law that will express a value in \emph{Watts} and can be expressed as the following equation: 
+\begin{center}
+    $Power(Watts) = V * I$
+\end{center}
+where V is the volatage given in \emph{Volts} and I is the current given in \emph{Amperes}. We can use performance monitoring counters (PFC) \cite{perfmonitoring:1991} to measure the amount of power required by a blockchain network with local nodes, and therefore estimate the total amount of power required when it scales up.
+
+To the best of our knowledge there is no a commercial implementation of a blockchain system running on mobile devices, perhaps an hybrid scheme would be feasible, and the MobiChain \cite{Suankaewmanee} is an approach that can run the mining process using mobile nodes. 
+
+It is part of our interest to know what is the power modeling of a mobile blockchain system using other consensus mechanisms and verify if that would make them and attractive  option to be incorporated in mobile e-commerce platforms.
+
+
+
+
+\section{Implementation}
+
+Implementation
+
+
+
+\section{Related Work}
+
+In another similar work, Suankaewmanee et al. \cite{Suankaewmanee} studied the performance of a mobile commerce application using blockchain technology in terms of computation energy, time consumption, and memory utilization. They introduce a mobile-commerce application using blockchain technology, the name was MobiChain, used for secured transaction. They develop an API which allows the mining processto be performed on mobile devices effectively.
+
+Also, in \cite{RyanCole} they describe approaches to modeling the energy consumption of both Proof of Work in Bitcoin and non-proof-of-work coins and associated consensus algorithms based on parameters including the size of the network, the number of messages sent per transaction, and the computing cost of such a consensus protocol.
+
+The authors in \cite{Richard_Dennis} conducts a formal analysis of the newly proposed temporal "rolling" blockchain using the B language. It will examine the security principles of the proposed model and conduct an in-depth analysis of the results, which will be compared to the security principles of traditional blockchain networks. Their aim is to demonstrate that our proposed model is a possible replacement to the traditional blockchain, and is capable of solving the scalability issue without introducing any additional security issues into the core data structure. 
+
+In \cite{Yang} the authors consider an edge computing enabled mobile blockchain network, where IoT devices or mobile users can access and utilize resources or computing services from an edge computing service provider to support their blockchain applications. First, they present overviews of blockchain and edge computing architecture, respectively. They propose a prototype of an edge computing system for mobile blockchain. Then they propose pricing schemes for the edge computing services for mobile blockchain.
+
+
+\section{Future Work}
+
+Arguably the most important piece of work to conduct in the future is to make this proposed algorithm live, running on a complete market with thousands of transactions per day in a single or multiple devices. This will then let us examine in greater detail whether the assumptions in this paper hold true against a real world adversary, who controls various percentages of the network and other variables that may affect the obtained results.
+
+The deployment onto a real world transactions network would also allow us to see whether our solutions to known issues and limitations hold true, or if new issues surface. It would also allow more research into possible secutiry vectors, such as an offline or online Internet connections between several mobile devices generating movements on the block chain.
+
+Another key research area is implementing this algorithm, for example on a distrusted reputation network, to accurately model how the roll of the blockchain should be performed: i.e. whether a simple time period is sufficient, or if a more sophisticated model is required to allow millions of crypto or normal currency transactions to be processed in mobile devices.
+
+As a major barrier for large-scale IoT blockchains is the transaction time, future research could be conducted to find out how the size of blockchain networks impacts the transaction time and what trade-offs between the energy usage and the transaction time may be on large-scale blockchains.
+
+
+
+\section{Conclusions}
+
+Conclusions 
 
 
 
